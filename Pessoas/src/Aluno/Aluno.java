@@ -1,5 +1,5 @@
 package Aluno;
-/**/
+
 public class Aluno {
 	/*Esses são os atributos do Aluno*/
 	private String nome;
