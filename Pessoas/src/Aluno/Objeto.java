@@ -27,6 +27,8 @@ public class Objeto {
 		System.out.println("RG: " + aluno1.getRegistroGeral());
 		System.out.println("CPF: " + aluno1.getNumeroCpf());
 		System.out.println("A media de nota é: " + aluno1.getMediaNota());
+		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
+		System.out.println("Resultado2: " + aluno1.getAlunoAprovado2() );
 		System.out.println("<<----------------------->>");
 		
 		Aluno aluno2 = new Aluno();/* Aqui será o Pedro */

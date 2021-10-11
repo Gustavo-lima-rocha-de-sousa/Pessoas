@@ -116,5 +116,21 @@ public class Aluno {
 		// TODO Auto-generated method stub
 		return (nota1 + nota2 + nota3+ nota4)/4;
 	}
-	
-}
+	/*Metodo que retorna sim ou não (True para aprovado, False para reprovado*/
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return true;
+		}else { 
+			return false;
+		}
+	}
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return "Aluno Esta Aprovado";
+		}else { 
+			return "Aluno Esta Reprovado";
+ }
+	}
+}	
