@@ -145,7 +145,7 @@ public class Aluno {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(nome);
+		return Objects.hash(nome, numeroCpf);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -156,8 +156,8 @@ public class Aluno {
 		if (getClass() != obj.getClass())
 			return false;
 		Aluno other = (Aluno) obj;
-		return Objects.equals(nome, other.nome);
+		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
 	}
 	
+	}
 	
-}	
