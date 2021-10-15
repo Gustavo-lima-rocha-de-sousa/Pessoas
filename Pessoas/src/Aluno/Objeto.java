@@ -30,7 +30,7 @@ public class Objeto {
 		aluno1.setNumeroCpf(Cpf);
 		aluno1.setNomeMae(NomeMae);
 		aluno1.setNomePai(NomePai);
-		aluno1.setDataMatricula(DataMatricula);
+		aluno1.setDataMatricula(  DataMatricula);
 		aluno1.setSerieMatriculado(SerieMatriculado);
 		aluno1.setNomeEscola(NomeEscola);
 		aluno1.setNota1(Double.parseDouble(note1));
@@ -38,7 +38,7 @@ public class Objeto {
 		aluno1.setNota3(Double.parseDouble(note3));
 		aluno1.setNota4(Double.parseDouble(note4));
 				
-		System.out.println("Nome do aluno é: " + aluno1.getNome());
+		/*System.out.println("Nome do aluno é: " + aluno1.getNome());
 		System.out.println("Idade: " + aluno1.getIdade());
 		System.out.println("Quando Nasceu: " + aluno1.getDataNascimento());
 		System.out.println("RG: " + aluno1.getRegistroGeral());
@@ -46,7 +46,12 @@ public class Objeto {
 		System.out.println("Escola que estuda é: " + aluno1.getNomeEscola());
 		System.out.println("A media de nota é: " + aluno1.getMediaNota());
 		System.out.println("Resultado: " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-		System.out.println("Resultado2: " + aluno1.getAlunoAprovado2() );
+		System.out.println("Resultado2: " + aluno1.getAlunoAprovado2() ); */ 
+		
+
+		System.out.println(aluno1.toString());/*Discrição do objeto na memoria*/
+		System.out.println("A media de nota é: " + aluno1.getMediaNota());
+		System.out.println("Resultado2: " + aluno1.getAlunoAprovado2()); 
 		
 	}
 
