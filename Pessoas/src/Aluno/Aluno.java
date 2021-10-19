@@ -1,6 +1,8 @@
 package Aluno;
 
+import java.util.ArrayList;
 import java.util.Objects;
+import java.util.List;
 
 public class Aluno {
 	/* Esses são os atributos do Aluno */
@@ -15,14 +17,13 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 
-	private Disciplina disciplina = new Disciplina();
-
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	private List <Disciplina> disciplinas = new ArrayList<Disciplina>();
+	
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
-
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 
 	public Aluno() {/* Cria os dados na memoria - Sendo padrão do Java */
@@ -120,12 +121,19 @@ public class Aluno {
 	/* Metodo que retorna media do aluno */
 
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) / 4;
+		
+			double somaNotas = 0.0;
+			
+			for (Disciplina disciplina : disciplinas) {
+				
+			somaNotas += disciplina.getNota();
+		}
+		return somaNotas / disciplinas.size(); 
 
-	}
-
+}	
 	/* Metodo que retorna sim ou não (True para aprovado, False para reprovado */
-	public boolean getAlunoAprovado() {
+	
+	public boolean getAlunoAprovado(){
 		double media = this.getMediaNota();
 		if (media >= 70) {
 			return true;
@@ -166,7 +174,7 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", disciplina=" + disciplina + "]";
+				+ serieMatriculado +"]";
 	}
 	
 	
