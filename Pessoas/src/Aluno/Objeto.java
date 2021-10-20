@@ -44,6 +44,13 @@ public class Objeto {
 		
 		aluno1.getDisciplinas().add(disciplina);
 	}
+	
+	int escolha = JOptionPane.showConfirmDialog(null,"Deseja Remover alguma Disciplina?");
+	
+	if(escolha == 0) {
+		String disciplinaRemover = JOptionPane.showInputDialog("Qual a Disciplina 1, 2, 3 ou 4?");
+		aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
+	}
 	System.out.println(aluno1); /*Discrição do objeto na memoria */
 	System.out.println("A media de nota é: " + aluno1.getMediaNota());
 	System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
