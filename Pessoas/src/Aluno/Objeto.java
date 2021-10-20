@@ -1,15 +1,23 @@
 package Aluno;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 public class Objeto {
 	public static void main(String[] args) {
+		
+		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		for(int qtd = 1; qtd <=2; qtd++) {
+		
 		/* New Aluno é uma instancia (Criação de Objeto */
 		
 		/* aluno1 é uma referencia para o objeto aluno */
 
-		String nome = JOptionPane.showInputDialog("Qual o nome do Aluno?");
-		String idade = JOptionPane.showInputDialog("Qual a idade?");
+		String nome = JOptionPane.showInputDialog("Qual o nome do Aluno "+qtd+" ?");
+		/*String idade = JOptionPane.showInputDialog("Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
 		String registroGeral = JOptionPane.showInputDialog("Qual seu RG?");
 		String Cpf = JOptionPane.showInputDialog("Qual seu CPF?");
@@ -17,14 +25,14 @@ public class Objeto {
 		String NomePai = JOptionPane.showInputDialog("Qual nome da sua pai");
 		String DataMatricula = JOptionPane.showInputDialog("Quando foi matriculado?");
 		String SerieMatriculado = JOptionPane.showInputDialog("Qual sua serie?");
-		String NomeEscola = JOptionPane.showInputDialog("Qual nome da escola?");
+		String NomeEscola = JOptionPane.showInputDialog("Qual nome da escola?");*/
 		
 		
 
 		Aluno aluno1 = new Aluno(); /* Aqui será o João */
 
 		aluno1.setNome(nome);
-		aluno1.setIdade(Integer.valueOf(idade));
+		/*aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(registroGeral);
 		aluno1.setNumeroCpf(Cpf);
@@ -32,8 +40,9 @@ public class Objeto {
 		aluno1.setNomePai(NomePai);
 		aluno1.setDataMatricula(DataMatricula);
 		aluno1.setSerieMatriculado(SerieMatriculado);
-		aluno1.setNomeEscola(NomeEscola);
-	/*Lista*/
+		aluno1.setNomeEscola(NomeEscola);*/
+	
+		/*Lista de diciplinas*/
 	for (int pos = 1; pos <=4; pos++) {
 		String nomeDisciplina = JOptionPane.showInputDialog("Nome da Disciplina "+pos+" ?");
 		String notaDisciplina = JOptionPane.showInputDialog("Nota da Disciplina "+pos+" ?");
@@ -47,13 +56,26 @@ public class Objeto {
 	
 	int escolha = JOptionPane.showConfirmDialog(null,"Deseja Remover alguma Disciplina?");
 	
-	if(escolha == 0) {
-		String disciplinaRemover = JOptionPane.showInputDialog("Qual a Disciplina 1, 2, 3 ou 4?");
-		aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - 1);
-	}
-	System.out.println(aluno1); /*Discrição do objeto na memoria */
-	System.out.println("A media de nota é: " + aluno1.getMediaNota());
-	System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
- 
+	if(escolha == 0) { /*Op Sim = 0*/
+		
+		int continuarRemover = 0;
+		int posicao = 1;
+		while (continuarRemover ==0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual a Disciplina 1, 2, 3 ou 4?");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
+			posicao ++;
+			continuarRemover = JOptionPane.showConfirmDialog(null,"Continuar a Remover?");
+		}
+	}	
+	alunos.add(aluno1);
+}	
+	for (Aluno aluno : alunos) {
+		
+	System.out.println(aluno); /*Discrição do objeto na memoria */
+	System.out.println("A media de nota é: " + aluno.getMediaNota());
+	System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+	System.out.println("____________------_________");
+	
+}	
 	}
 }
