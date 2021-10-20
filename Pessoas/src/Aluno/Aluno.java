@@ -17,11 +17,12 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 
-	private List <Disciplina> disciplinas = new ArrayList<Disciplina>();
-	
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
 	}
+
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
@@ -121,19 +122,19 @@ public class Aluno {
 	/* Metodo que retorna media do aluno */
 
 	public double getMediaNota() {
-		
-			double somaNotas = 0.0;
-			
-			for (Disciplina disciplina : disciplinas) {
-				
+
+		double somaNotas = 0.0;
+
+		for (Disciplina disciplina : disciplinas) {
+
 			somaNotas += disciplina.getNota();
 		}
-		return somaNotas / disciplinas.size(); 
+		return somaNotas / disciplinas.size();
 
-}	
+	}
 	/* Metodo que retorna sim ou não (True para aprovado, False para reprovado */
-	
-	public boolean getAlunoAprovado(){
+
+	public boolean getAlunoAprovado() {
 		double media = this.getMediaNota();
 		if (media >= 70) {
 			return true;
@@ -144,8 +145,13 @@ public class Aluno {
 
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
-		if (media >= 70) {
-			return "Aluno Esta Aprovado";
+		if (media >= 50) {
+			if (media >= 70) {
+				return "Aluno Esta Aprovado";
+			} else {
+				return "Aluno em recuperação";
+			}
+
 		} else {
 			return "Aluno Esta Reprovado";
 		}
@@ -174,9 +180,7 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado +"]";
+				+ serieMatriculado + "]";
 	}
-	
-	
 
 }

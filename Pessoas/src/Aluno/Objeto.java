@@ -54,6 +54,6 @@ public class Objeto {
 	System.out.println(aluno1); /*Discrição do objeto na memoria */
 	System.out.println("A media de nota é: " + aluno1.getMediaNota());
 	System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
-
+ 
 	}
 }
