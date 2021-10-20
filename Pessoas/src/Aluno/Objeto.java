@@ -33,35 +33,20 @@ public class Objeto {
 		aluno1.setDataMatricula(DataMatricula);
 		aluno1.setSerieMatriculado(SerieMatriculado);
 		aluno1.setNomeEscola(NomeEscola);
-
-	
 	/*Lista*/
-	Disciplina disciplina1 = new Disciplina();
-	disciplina1.setDisciplina("Banco de dados");
-	disciplina1.setNota(90);
-	
-	aluno1.getDisciplinas().add(disciplina1);
-
-	Disciplina disciplina2 = new Disciplina();
-	disciplina2.setDisciplina("Matematica");
-	disciplina2.setNota(90);
-	
-	aluno1.getDisciplinas().add(disciplina2);
-	
-	Disciplina disciplina3 = new Disciplina();
-	disciplina3.setDisciplina("Geografia");
-	disciplina3.setNota(97);
-	
-	aluno1.getDisciplinas().add(disciplina3);
-	
-	Disciplina disciplina4 = new Disciplina();
-	disciplina4.setDisciplina("Java Web");
-	disciplina4.setNota(70);
-	
-	aluno1.getDisciplinas().add(disciplina4);
-	
+	for (int pos = 1; pos <=4; pos++) {
+		String nomeDisciplina = JOptionPane.showInputDialog("Nome da Disciplina "+pos+" ?");
+		String notaDisciplina = JOptionPane.showInputDialog("Nota da Disciplina "+pos+" ?");
+		
+		Disciplina disciplina = new Disciplina();
+		disciplina.setDisciplina(nomeDisciplina);
+		disciplina.setNota(Double.valueOf(notaDisciplina));
+		
+		aluno1.getDisciplinas().add(disciplina);
+	}
 	System.out.println(aluno1); /*Discrição do objeto na memoria */
 	System.out.println("A media de nota é: " + aluno1.getMediaNota());
 	System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
+
 	}
 }
