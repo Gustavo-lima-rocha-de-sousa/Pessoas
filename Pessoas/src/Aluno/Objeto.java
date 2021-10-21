@@ -71,11 +71,26 @@ public class Objeto {
 }	
 	for (Aluno aluno : alunos) {
 		
-	System.out.println(aluno); /*Discrição do objeto na memoria */
-	System.out.println("A media de nota é: " + aluno.getMediaNota());
-	System.out.println("Resultado = " + aluno.getAlunoAprovado2());
-	System.out.println("____________------_________");
-	
-}	
-	}
+		if( aluno.getNome().equalsIgnoreCase("Alex")) {
+			
+			alunos.remove(aluno);
+			break;
+	     }else {
+				System.out.println(aluno); /*Discrição do objeto na memoria */
+				System.out.println("A media de nota é: " + aluno.getMediaNota());
+				System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+				System.out.println("____________------_________");
+			}
+		}
+
+	for (Aluno aluno : alunos) {
+		System.out.println("Alunos que sobraram na lista");
+		System.out.println(aluno.getNome());
+		System.out.println("Suas Materias são");
+		
+		for (Disciplina disciplina : aluno.getDisciplinas()) {
+			System.out.println(disciplina.getDisciplina());
+			}
+		}
+	}	
 }
