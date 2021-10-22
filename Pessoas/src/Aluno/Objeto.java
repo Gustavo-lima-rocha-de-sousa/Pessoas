@@ -81,13 +81,13 @@ public class Objeto {
 		
 		for (Aluno aluno : alunos) {
 			if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)) {
-				maps.get(StatusAluno.APROVADO);
+				maps.get(StatusAluno.APROVADO).add(aluno);
 
 			} else if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.RECUPERACAO)) {
-				maps.get(StatusAluno.RECUPERACAO);
+				maps.get(StatusAluno.RECUPERACAO).add(aluno);
 
 			} else if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.REPROVADO)) {
-				maps.get(StatusAluno.REPROVADO);
+				maps.get(StatusAluno.REPROVADO).add(aluno);
 			}
 		}
 
