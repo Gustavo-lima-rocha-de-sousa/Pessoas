@@ -11,6 +11,12 @@ import cursojava.constantes.StatusAluno;
 public class Objeto {
 	public static void main(String[] args) {
 
+		String login = JOptionPane.showInputDialog("Informe o Login");
+		String senha = JOptionPane.showInputDialog("Informe a Senha");
+		
+		if(login.equalsIgnoreCase("admin") &&
+				senha.equalsIgnoreCase("admin")){
+		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
@@ -107,6 +113,7 @@ public class Objeto {
 		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
 			System.out.println(aluno.getNome() + " Resultado: " + aluno.getAlunoAprovado2() + " Com media de: "
 					+ aluno.getMediaNota());
+			}
 		}
 	}
 }
