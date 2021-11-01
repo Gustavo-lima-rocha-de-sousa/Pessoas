@@ -2,6 +2,8 @@ package Aluno;
 
 public class Pessoa {
 	
+	/*Classe Master (Atributos Comuns a todos os objetos)*/
+	
 	protected String nome;
 	protected int idade;
 	protected String dataNascimento;

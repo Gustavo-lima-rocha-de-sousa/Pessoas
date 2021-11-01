@@ -5,6 +5,8 @@ public class Secretario extends Pessoa {
 	private String registro;
 	private String nivelCargo;
 	private String experiencia;
+	
+
 	public String getRegistro() {
 		return registro;
 	}
