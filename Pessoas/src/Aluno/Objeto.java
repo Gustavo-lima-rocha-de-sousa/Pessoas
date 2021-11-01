@@ -97,19 +97,19 @@ public class Objeto {
 			}
 		}
 
-		System.out.println("------->Lista Aprovados<----------- ");
+		System.out.println("------->Lista Aprovados<-----------");
 		for (Aluno aluno : maps.get(StatusAluno.APROVADO)){
 			System.out.println(aluno.getNome() + " Resultado: " + aluno.getAlunoAprovado2() + " Com media de: "
 					+ aluno.getMediaNota());
 		}
 
-		System.out.println("------->Lista Recuperação<----------- ");
+		System.out.println("------->Lista Recuperação<-----------");
 		for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
 			System.out.println(aluno.getNome() + " Resultado: " + aluno.getAlunoAprovado2() + " Com media de: "
 					+ aluno.getMediaNota());
 		}
 
-		System.out.println("------->Lista Reprovados<----------- ");
+		System.out.println("------->Lista Reprovados<-----------");
 		for (Aluno aluno : maps.get(StatusAluno.REPROVADO)) {
 			System.out.println(aluno.getNome() + " Resultado: " + aluno.getAlunoAprovado2() + " Com media de: "
 					+ aluno.getMediaNota());
