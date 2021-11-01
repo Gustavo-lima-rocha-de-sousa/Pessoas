@@ -30,5 +30,8 @@ public class Objeto2 {
 		System.out.println(diretor.pessoaMaiorIdade());
 		System.out.println(secretario.pessoaMaiorIdade());
 	
+		System.out.println("Salario Do Aluno: " + aluno.salario());
+		System.out.println("Salario Do Diretor: " + diretor.salario());
+		System.out.println("Salario Do Secretario: " + secretario.salario());
 	}
 }
