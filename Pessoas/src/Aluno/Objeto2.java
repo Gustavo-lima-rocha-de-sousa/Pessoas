@@ -29,8 +29,6 @@ public class Objeto2 {
 		System.out.println (aluno.pessoaMaiorIdade() + " - " + aluno.msgMaiorIdade() );
 		System.out.println(diretor.pessoaMaiorIdade());
 		System.out.println(secretario.pessoaMaiorIdade());
-		
-		
+	
 	}
 }
-

@@ -1,6 +1,6 @@
 package Aluno;
 
-public class Pessoa {
+public abstract class Pessoa {
 	
 	/*Classe Master (Atributos Comuns a todos os objetos)*/
 	
