@@ -16,6 +16,10 @@ public class Objeto2 {
 		secretario.setExperiencia("Administração");
 		secretario.setRegistroGeral("569874216");
 		
+		System.out.println(aluno);
+		System.out.println(diretor);
+		System.out.println(secretario);
+		
 		
 	}
 }
