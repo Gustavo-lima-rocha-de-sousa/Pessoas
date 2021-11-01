@@ -7,18 +7,28 @@ public class Objeto2 {
 		Aluno aluno = new Aluno();
 		aluno.setNome("Gustavo Lima - Você é de mais");
 		aluno.setNomeEscola("Jdev");
+		aluno.setIdade(22);
+		
 		
 		Diretor diretor = new Diretor();
 		diretor.setRegistroGeral("55568894");
 		diretor.setNome("Alex");
+		diretor.setIdade(50);				
+		
 		
 		Secretario secretario = new Secretario();
 		secretario.setExperiencia("Administração");
 		secretario.setRegistroGeral("569874216");
+		secretario.setIdade(18);
+		
 		
 		System.out.println(aluno);
 		System.out.println(diretor);
 		System.out.println(secretario);
+		
+		System.out.println (aluno.pessoaMaiorIdade() + " - " + aluno.msgMaiorIdade() );
+		System.out.println(diretor.pessoaMaiorIdade());
+		System.out.println(secretario.pessoaMaiorIdade());
 		
 		
 	}

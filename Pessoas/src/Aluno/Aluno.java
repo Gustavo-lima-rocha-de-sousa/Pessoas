@@ -178,4 +178,14 @@ public class Aluno extends Pessoa {
 				+ serieMatriculado + "]";
 	}
 
+	@Override /*Identifica Método Sobreescrito*/
+	public boolean pessoaMaiorIdade() {
+
+		return idade >=21; 
+	}
+	
+	public String msgMaiorIdade (){
+		return this.pessoaMaiorIdade() ? "Obaa Aluno é maior de idade" : "Ixiiii Você é menor de idade";
+	}		
+	
 }
