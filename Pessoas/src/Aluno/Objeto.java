@@ -14,9 +14,18 @@ public class Objeto {
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
 		
+		Secretario secretario = new Secretario();
+		secretario.setLogin(login);
+		secretario.setSenha(senha);
+		
+		if(secretario.autenticar()) { /*se TRUE acesse se FALSE não acessa*/
+		
+		
 		if(login.equalsIgnoreCase("admin") &&
 				senha.equalsIgnoreCase("admin")){
 		
+	
+			
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
@@ -114,6 +123,10 @@ public class Objeto {
 			System.out.println(aluno.getNome() + " Resultado: " + aluno.getAlunoAprovado2() + " Com media de: "
 					+ aluno.getMediaNota());
 			}
+		}else {
+			JOptionPane.showConfirmDialog(null, "Acesso Não Permitido");
 		}
+		
 	}
+}
 }
