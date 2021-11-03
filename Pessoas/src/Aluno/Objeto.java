@@ -15,10 +15,8 @@ public class Objeto {
 
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
-				
-		PermitirAcesso permitirAcesso = new Secretario(login,senha);
-		
-		if(new FuncaoAutenticacao(permitirAcesso).autenticar()) { /*Travar o contrato para autorizar somente quem realmente tem o contrato 100% legitimo*/
+						
+		if(new FuncaoAutenticacao(new Secretario(login,senha)).autenticar()) { /*Travar o contrato para autorizar somente quem realmente tem o contrato 100% legitimo*/
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
