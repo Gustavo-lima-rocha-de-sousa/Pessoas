@@ -15,14 +15,10 @@ public class Objeto {
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
 		
+		PermitirAcesso permitirAcesso = new Secretario(login,senha);
+		
 		if(new Secretario().autenticar(login,senha)) { /*se TRUE acesse se FALSE não acessa*/
 		
-		
-		if(login.equalsIgnoreCase("admin") &&
-				senha.equalsIgnoreCase("admin")){
-		
-	
-			
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
@@ -121,9 +117,9 @@ public class Objeto {
 					+ aluno.getMediaNota());
 			}
 		}else {
-			JOptionPane.showConfirmDialog(null, "Acesso Não Permitido");
+			JOptionPane.showMessageDialog(null, "Acesso não permitido");
 		}
 		
 	}
 }
-}
+
