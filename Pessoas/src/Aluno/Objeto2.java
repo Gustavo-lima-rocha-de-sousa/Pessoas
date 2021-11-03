@@ -17,6 +17,7 @@ public class Objeto2 {
 		
 		
 		Secretario secretario = new Secretario();
+		secretario.setNome("Joao");
 		secretario.setExperiencia("Administração");
 		secretario.setRegistroGeral("569874216");
 		secretario.setIdade(18);
@@ -33,5 +34,16 @@ public class Objeto2 {
 		System.out.println("Salario Do Aluno: " + aluno.salario());
 		System.out.println("Salario Do Diretor: " + diretor.salario());
 		System.out.println("Salario Do Secretario: " + secretario.salario());
+		
+		teste(aluno);
+		teste(diretor);
+		teste(secretario);
+	}
+	
+	public static void teste(Pessoa pessoa) {
+	
+		System.out.println("Essa pessoa é de mais: " + pessoa.getNome() + 
+				" e o salário é de: " + pessoa.salario());
+		
 	}
 }
