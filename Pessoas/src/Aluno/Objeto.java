@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import Interfaces.PermitirAcesso;
 import cursojava.constantes.StatusAluno;
 
 public class Objeto {
@@ -14,11 +15,9 @@ public class Objeto {
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
 		
-		Secretario secretario = new Secretario();
-		secretario.setLogin(login);
-		secretario.setSenha(senha);
+		PermitirAcesso secretario = new Secretario();
 		
-		if(secretario.autenticar()) { /*se TRUE acesse se FALSE não acessa*/
+		if(secretario.autenticar(login,senha)) { /*se TRUE acesse se FALSE não acessa*/
 		
 		
 		if(login.equalsIgnoreCase("admin") &&
