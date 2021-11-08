@@ -6,13 +6,14 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
-import Interfaces.PermitirAcesso;
 import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
 
 public class Objeto {
-	public static void main(String[] args) {
-
+	public static void main(String[] args) { 
+		
+		try {
+		
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
 						
@@ -22,37 +23,19 @@ public class Objeto {
 
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
-		for (int qtd = 1; qtd <= 5; qtd++) {
+		for (int qtd = 1; qtd <= 2; qtd++) {
 
 			/* New Aluno é uma instancia (Criação de Objeto */
 
 			/* aluno1 é uma referencia para o objeto aluno */
 
 			String nome = JOptionPane.showInputDialog("Qual o nome do Aluno " + qtd + " ?");
-			/*
-			 * String idade = JOptionPane.showInputDialog("Qual a idade?"); String
-			 * dataNascimento = JOptionPane.showInputDialog("Data de nascimento?"); String
-			 * registroGeral = JOptionPane.showInputDialog("Qual seu RG?"); String Cpf =
-			 * JOptionPane.showInputDialog("Qual seu CPF?"); String NomeMae =
-			 * JOptionPane.showInputDialog("Qual nome da sua mãe"); String NomePai =
-			 * JOptionPane.showInputDialog("Qual nome da sua pai"); String DataMatricula =
-			 * JOptionPane.showInputDialog("Quando foi matriculado?"); String
-			 * SerieMatriculado = JOptionPane.showInputDialog("Qual sua serie?"); String
-			 * NomeEscola = JOptionPane.showInputDialog("Qual nome da escola?");
-			 */
+			
 
-			Aluno aluno1 = new Aluno(); /* Aqui será o João */
+			Aluno aluno1 = new Aluno(); 
 
 			aluno1.setNome(nome);
-			/*
-			 * aluno1.setIdade(Integer.valueOf(idade));
-			 * aluno1.setDataNascimento(dataNascimento);
-			 * aluno1.setRegistroGeral(registroGeral); aluno1.setNumeroCpf(Cpf);
-			 * aluno1.setNomeMae(NomeMae); aluno1.setNomePai(NomePai);
-			 * aluno1.setDataMatricula(DataMatricula);
-			 * aluno1.setSerieMatriculado(SerieMatriculado);
-			 * aluno1.setNomeEscola(NomeEscola);
-			 */
+			
 
 			/* Lista de diciplinas */
 			for (int pos = 1; pos <= 1; pos++) {
@@ -118,7 +101,21 @@ public class Objeto {
 		}else {
 			JOptionPane.showMessageDialog(null, "Acesso não permitido");
 		}
+	/* aqui*/
+	}catch (Exception e) {
+			
+		StringBuilder saida = new StringBuilder();
 		
+			e.printStackTrace();/*Imprime o log no console*/
+		
+			for (int i = 0; i < e.getStackTrace(). length; i++) {
+				saida.append("\n Classe de erro:" + e.getStackTrace()[i].getClassName());
+				saida.append("\n Método de erro:" + e.getStackTrace()[i].getMethodName());
+				saida.append("\n Linha de erro:" + e.getStackTrace()[i].getLineNumber());
+				saida.append("\n Class:" + e.getStackTrace()[i].getClass().getName());
+			}		
+		JOptionPane.showMessageDialog(null, "Erro ao processar notas." + saida.toString() );
+		}	
 	}
 }
 
