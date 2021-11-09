@@ -1,8 +1,10 @@
 package Aluno;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -14,16 +16,19 @@ public class Objeto {
 		
 		try {
 		
+			File fil =  new File("arquivo.txt");
+			Scanner scanner = new Scanner(fil);
+			
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
 						
 		if(new FuncaoAutenticacao(new Diretor(login,senha)).autenticar()) { /*Travar o contrato para autorizar somente quem realmente tem o contrato 100% legitimo*/
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
-
+			
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
-		for (int qtd = 1; qtd <= 2; qtd++) {
+		for (int qtd = 1; qtd <= 1; qtd++) {
 
 			/* New Aluno é uma instancia (Criação de Objeto */
 
@@ -31,11 +36,13 @@ public class Objeto {
 
 			String nome = JOptionPane.showInputDialog("Qual o nome do Aluno " + qtd + " ?");
 			
-
+			String idade = JOptionPane.showInputDialog("Qual a idade?");
+			
+			
 			Aluno aluno1 = new Aluno(); 
 
 			aluno1.setNome(nome);
-			
+			aluno1.setIdade(Integer.valueOf(idade));
 
 			/* Lista de diciplinas */
 			for (int pos = 1; pos <= 1; pos++) {
@@ -102,7 +109,7 @@ public class Objeto {
 			JOptionPane.showMessageDialog(null, "Acesso não permitido");
 		}
 	/* aqui*/
-	}catch (Exception e) {
+	}catch (NumberFormatException e) {
 			
 		StringBuilder saida = new StringBuilder();
 		
@@ -114,8 +121,12 @@ public class Objeto {
 				saida.append("\n Linha de erro:" + e.getStackTrace()[i].getLineNumber());
 				saida.append("\n Class:" + e.getStackTrace()[i].getClass().getName());
 			}		
-		JOptionPane.showMessageDialog(null, "Erro ao processar notas." + saida.toString() );
-		}	
+		JOptionPane.showMessageDialog(null, "Erro de conversão de número." + saida.toString() );
+		}	catch (NullPointerException e) {
+			JOptionPane.showMessageDialog(null, "Opa um Null Pointer Exception" + e.getClass() );
+		}catch (Exception e) {
+			e.printStackTrace();
+		} 
 	}
 }
 
