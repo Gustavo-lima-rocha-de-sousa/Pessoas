@@ -129,7 +129,6 @@ public class Objeto {
 	public static void lerArquivo() throws FileNotFoundException {
 		File fil = new File("c://lines.txt");
 		Scanner scanner = new Scanner(fil);
-
+	}
 }
 
-}
