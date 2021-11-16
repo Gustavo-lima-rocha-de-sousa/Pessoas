@@ -1,11 +1,8 @@
 package Aluno;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 import cursojava.classesauxiliares.FuncaoAutenticacao;
@@ -15,10 +12,7 @@ public class Objeto {
 	public static void main(String[] args) { 
 		
 		try {
-		
-			File fil =  new File("arquivo.txt");
-			Scanner scanner = new Scanner(fil);
-			
+					
 		String login = JOptionPane.showInputDialog("Informe o Login");
 		String senha = JOptionPane.showInputDialog("Informe a Senha");
 						
@@ -126,6 +120,10 @@ public class Objeto {
 			JOptionPane.showMessageDialog(null, "Opa um Null Pointer Exception" + e.getClass() );
 		}catch (Exception e) {
 			e.printStackTrace();
+			JOptionPane.showInternalMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
+		}finally { /* Sempre é executado ocorrendo erros ou não. */
+			JOptionPane.showMessageDialog(null, "Obrigado Por Aprender Java Com o Alex.");
+			
 		} 
 	}
 }
