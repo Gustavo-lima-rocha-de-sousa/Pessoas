@@ -51,8 +51,9 @@ public class ArrayVetor {
 				}
 			}
 			System.out.println("A Maior Nota da Disciplina é: " + disci.getDisciplina() + " é de valor: " + notaMax);
-		}
 		
+		}
+				
 		}		
 		
 	}	
