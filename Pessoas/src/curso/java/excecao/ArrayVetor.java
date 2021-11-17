@@ -9,6 +9,8 @@ public class ArrayVetor {
 	
 	/*Usado para executar código*/
 	public static void main(String[] args) {
+		double[] notas = {8.8,9.7,7.6,6,8};
+		double[] notaLogica = {7.1,5.7,9.6,7,8};
 		
 		Aluno aluno = new Aluno();
 		aluno.setNome("Gustavo Lima Rocha de Sousa");
@@ -16,10 +18,15 @@ public class ArrayVetor {
 		
 		Disciplina disciplina = new Disciplina();
 		disciplina.setDisciplina("Curso Java");
+		disciplina.setNota(notas);
 		
-		double[] notas = {8.8,9.7,7.6,6,8};
- 		disciplina.setNota(notas);
+		aluno.getDisciplinas().add(disciplina);
 		
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Logica de Programação");
+		disciplina2.setNota(notaLogica);
+		
+		aluno.getDisciplinas().add(disciplina2);
 		
 		
 		
