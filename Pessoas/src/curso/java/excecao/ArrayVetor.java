@@ -7,6 +7,13 @@ public class ArrayVetor {
 	/*Usado para executar código*/
 	public static void main(String[] args) {
 		
+		
+	
+	String[] valores = {"Gustavo", "90", "Curso Java"};
+	for (int pos = 0 ; pos < valores.length; pos++) {
+		System.out.println("Valores na posição: " + (pos + 1) + " é= " + valores[pos]);
+	}		
+		
 		/*Array pode ser de todos os tipos de dados e objetos também*/
 		
 		
