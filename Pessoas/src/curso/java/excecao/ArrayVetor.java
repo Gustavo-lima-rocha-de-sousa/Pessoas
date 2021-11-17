@@ -28,12 +28,22 @@ public class ArrayVetor {
 		
 		aluno.getDisciplinas().add(disciplina2);
 		
+		System.out.println("Nome Do Aluno = " + aluno.getNome() + " Inscrito no curso:" + aluno.getNomeEscola() );
+		System.out.println("----->Disciplinas do Aluno<------");
+		for(Disciplina disci: aluno.getDisciplinas()) {
+
+			System.out.println("Disciplina: " + disci.getDisciplina());
+			
+			System.out.println("As Notas da disciplina são:");
+			for(int pos = 0; pos < disci.getNota().length; pos++) {
+				System.out.println("Nota: " + (pos +1) + " é igual: " + disci.getNota()[pos]); 
+			
+			}
 		
+		}		
 		
-		
-		
-		
-		
+	}	
+	}	
 		
 	
 	//String[] valores = {"Gustavo", "90", "Curso Java"};
@@ -54,8 +64,7 @@ public class ArrayVetor {
 	//for(int pos = 0; pos < notas.length; pos++) {
 		//String valor = JOptionPane.showInputDialog("Qual o Valor da Posição " + (pos +1) + " ?");
 		//notas[pos] = Double.valueOf(valor);
-			}
+			//}
 	//for (int pos = 0 ; pos < notas.length; pos++) {
 		//System.out.println("Nota: " + (pos + 1) + " é= " + notas[pos]);
 	//}
-}
