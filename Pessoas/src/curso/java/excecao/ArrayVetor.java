@@ -9,8 +9,8 @@ public class ArrayVetor {
 	
 	/*Usado para executar código*/
 	public static void main(String[] args) {
-		double[] notas = {8.8,9.7,7.6,6,8};
-		double[] notaLogica = {7.1,5.7,9.6,7,8};
+		double[] notas = {8.8,9.7,7.6,6.8};
+		double[] notaLogica = {7.1,5.7,9.6,7.8};
 		
 		Aluno aluno = new Aluno();
 		aluno.setNome("Gustavo Lima Rocha de Sousa");
