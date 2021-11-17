@@ -30,20 +30,33 @@ public class ArrayVetor {
 		
 		System.out.println("Nome Do Aluno = " + aluno.getNome() + " Inscrito no curso:" + aluno.getNomeEscola() );
 		System.out.println("----->Disciplinas do Aluno<------");
+		
 		for(Disciplina disci: aluno.getDisciplinas()) {
 
 			System.out.println("Disciplina: " + disci.getDisciplina());
 			
 			System.out.println("As Notas da disciplina são:");
+			
+			
+			double notaMax = 0.0;
 			for(int pos = 0; pos < disci.getNota().length; pos++) {
 				System.out.println("Nota: " + (pos +1) + " é igual: " + disci.getNota()[pos]); 
-			
+				if(pos ==0) {
+					notaMax = disci.getNota()[pos];
+					
+				}else {
+					if(disci.getNota()[pos] > notaMax) {
+						notaMax = disci.getNota()[pos];
+					}
+				}
 			}
+			System.out.println("A Maior Nota da Disciplina é: " + disci.getDisciplina() + " é de valor: " + notaMax);
+		}
 		
 		}		
 		
 	}	
-	}	
+	
 		
 	
 	//String[] valores = {"Gustavo", "90", "Curso Java"};
