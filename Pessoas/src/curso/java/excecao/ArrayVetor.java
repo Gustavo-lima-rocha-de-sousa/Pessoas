@@ -28,57 +28,13 @@ public class ArrayVetor {
 		
 		aluno.getDisciplinas().add(disciplina2);
 		
-		System.out.println("Nome Do Aluno = " + aluno.getNome() + " Inscrito no curso:" + aluno.getNomeEscola() );
-		System.out.println("----->Disciplinas do Aluno<------");
+		//------------------------------------------------
+	
+		Aluno[] arrayAlunos = new Aluno[1];
+		arrayAlunos[0] = aluno;
 		
-		for(Disciplina disci: aluno.getDisciplinas()) {
-
-			System.out.println("Disciplina: " + disci.getDisciplina());
-			
-			System.out.println("As Notas da disciplina são:");
-			
-			
-			double notaMax = 0.0;
-			for(int pos = 0; pos < disci.getNota().length; pos++) {
-				System.out.println("Nota: " + (pos +1) + " é igual: " + disci.getNota()[pos]); 
-				if(pos ==0) {
-					notaMax = disci.getNota()[pos];
-					
-				}else {
-					if(disci.getNota()[pos] > notaMax) {
-						notaMax = disci.getNota()[pos];
-					}
-				}
-			}
-			System.out.println("A Maior Nota da Disciplina é: " + disci.getDisciplina() + " é de valor: " + notaMax);
-		
-		}
-				
+						
 		}		
 		
 	}	
 	
-		
-	
-	//String[] valores = {"Gustavo", "90", "Curso Java"};
-	//for (int pos = 0 ; pos < valores.length; pos++) {
-		//System.out.println("Valores na posição: " + (pos + 1) + " é= " + valores[pos]);
-	//}		
-		
-		/*Array pode ser de todos os tipos de dados e objetos também*/
-		
-		
-		//String posicoes = JOptionPane.showInputDialog("Quantas posições o Array deve ter?");
-		
-	
-		/*array sempre deve ter a quantiadade de posições definidas*/	
-	//double[] notas = new double[Integer.parseInt(posicoes)];
-	
-	
-	//for(int pos = 0; pos < notas.length; pos++) {
-		//String valor = JOptionPane.showInputDialog("Qual o Valor da Posição " + (pos +1) + " ?");
-		//notas[pos] = Double.valueOf(valor);
-			//}
-	//for (int pos = 0 ; pos < notas.length; pos++) {
-		//System.out.println("Nota: " + (pos + 1) + " é= " + notas[pos]);
-	//}
