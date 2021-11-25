@@ -13,8 +13,14 @@ public class Matriz {
 		notas[1][0] = 5;
 		notas[1][1] = 70;	
 		notas[1][2] = 8;
+	
 		
-		System.out.println(notas);
-		
+		for (int poslinha = 0; poslinha < notas.length; poslinha ++) {
+			System.out.println("--------------------");
+			for (int poscoluna = 0; poscoluna < notas[poslinha].length; poscoluna++) {
+				
+				System.out.println("Valor da Matriz: " + notas[poslinha][poscoluna]);
+			}
+		}
 	}
 }
