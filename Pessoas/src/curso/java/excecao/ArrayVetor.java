@@ -28,10 +28,30 @@ public class ArrayVetor {
 		
 		aluno.getDisciplinas().add(disciplina2);
 		
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Gustavo Lima Rocha de Sousa 2");
+		aluno2.setNomeEscola("Jdev Treinamento2 ");
+		
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("Curso Java 2");
+		disciplina3.setNota(notas);
+		
+		aluno2.getDisciplinas().add(disciplina3);
+		
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Logica de Programação 2 ");
+		disciplina4.setNota(notaLogica);
+		
+		aluno2.getDisciplinas().add(disciplina4);
+		
+		
+		
 		//------------------------------------------------
 	
-		Aluno[] arrayAlunos = new Aluno[1];
+		Aluno[] arrayAlunos = new Aluno[2];
 		arrayAlunos[0] = aluno;
+		arrayAlunos[1] = aluno2;
 		
 		for (int pos = 0; pos < arrayAlunos.length; pos++) {	
 			
