@@ -33,8 +33,24 @@ public class ArrayVetor {
 		Aluno[] arrayAlunos = new Aluno[1];
 		arrayAlunos[0] = aluno;
 		
-						
+		for (int pos = 0; pos < arrayAlunos.length; pos++) {	
+			
+			System.out.println("Nome do Aluno é: " + arrayAlunos[pos].getNome());
+			
+			for (Disciplina disci : arrayAlunos[pos].getDisciplinas()) {
+				
+				System.out.println("Nome da Disciplina é: " + disci.getDisciplina() );
+				
+				for (int posnota = 0; posnota < disci.getNota().length; posnota++ ) {
+				
+					System.out.println("A nota número: " + posnota + " é igual a: " + disci.getNota()[posnota]);	
+					
+						}
+					}
+				}
+			
+			}
 		}		
 		
-	}	
+	
 	
