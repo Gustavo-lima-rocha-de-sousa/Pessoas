@@ -14,11 +14,14 @@ public class AulaThread {
 				for (int pos = 0; pos < 10; pos ++){
 				/* Quero Executar essa envio de e-mail com um tempo de para ou tempo determinado */
 				System.out.println("Executando alguma rotina, por exemplo envio de e-mail.");
+				
 				try {
 					Thread.sleep(1000);
+					
 				} catch (InterruptedException e) {
 					
 					e.printStackTrace();
+					
 				}
 				
 				} 
@@ -29,7 +32,7 @@ public class AulaThread {
 		
 			
 		/*Código do sistema do usuário continua o fluxo de trabalho*/
-		System.out.println("E-mail enviado");			
+					
 		/*Fluxo do sistema, cadastro de venda, emissao de nota fiscal, algo do tipo*/
 		JOptionPane.showMessageDialog(null, "Sistema continua executando para o usuário");
 	}
