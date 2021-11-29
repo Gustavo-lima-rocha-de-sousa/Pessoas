@@ -13,12 +13,13 @@ public class ImplementacaoFilaThread extends Thread {
 		pilha_fila.add(objetoFilaThread);
 		}
 	
-	
-
-	
-	public void run() {
-		Iterator iteracao = pilha_fila.iterator();
 		
+	public void run() {
+		System.out.println("Fila Rodando");
+		
+		while(true) {
+		
+		Iterator iteracao = pilha_fila.iterator();
 		synchronized (iteracao) {/*Bloquear o acesso a esta lista por outro processos*/
 			while(iteracao.hasNext()) { /*Enquanto conter dados na lista irá processar*/
 				
@@ -27,6 +28,9 @@ public class ImplementacaoFilaThread extends Thread {
 				/*Processar nota fiscal*/
 				/*Gerar uma lista enorme de PDF*/
 				/*Gerar um envio em massa de email*/
+				System.out.println("------------------");
+				System.out.println(processar.getNome());
+				System.out.println(processar.getEmail());
 				
 				iteracao.remove();
 				
@@ -38,7 +42,6 @@ public class ImplementacaoFilaThread extends Thread {
 				}
 			}	
 		}
-		
 			
 		try {
 			Thread.sleep(1000);/*Processou toda a lista, da um tempo para limpesa de memoria*/
@@ -47,7 +50,8 @@ public class ImplementacaoFilaThread extends Thread {
 			e.printStackTrace();
 		}
 		
-		
+		}
+	
 	}
 	
 }
