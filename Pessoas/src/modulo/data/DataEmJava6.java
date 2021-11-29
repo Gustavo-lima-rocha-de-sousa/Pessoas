@@ -24,7 +24,7 @@ public class DataEmJava6 {
 		System.out.println("Mês: " + 
 				localDate.getMonth());
 		
-		System.out.println("Ano: " + 
+		System.out.println("Dia do ano: " + 
 				localDate.getYear());
 		
 	}
