@@ -14,11 +14,16 @@ public class DatasEmJava4 {
 	Calendar calendar = Calendar.getInstance();
 	calendar.setTime(dateInicial);
 		
-	for(int parcela = 1; parcela <= 12; parcela++ ) {
+	for(int parcela = 1; parcela <= 24; parcela++ ) {
 		calendar.add(calendar.MONTH, 1);
 		
+		int valor = 15500;
+		int soma = 24;
+		int saldo = valor / soma;
+				
 		System.out.println("A parcela de número: " + parcela + " Vence dia: " +
-				new SimpleDateFormat("dd/MM/yyyy").format(calendar.getTime()));
+				new SimpleDateFormat("dd/MM/yyyy").format(calendar.getTime())
+				+ " o Valor de cada parcela é " + saldo);
 		}
 	}	
 }
