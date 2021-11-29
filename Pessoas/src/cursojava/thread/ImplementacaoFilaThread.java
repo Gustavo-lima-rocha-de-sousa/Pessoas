@@ -35,7 +35,7 @@ public class ImplementacaoFilaThread extends Thread {
 				iteracao.remove();
 				
 				try {
-					Thread.sleep(100);/*Dar um tempo para descarga de memoria*/
+					Thread.sleep(1000);/*Dar um tempo para descarga de memoria*/
 				} catch (InterruptedException e) {
 			
 					e.printStackTrace();
