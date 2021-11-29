@@ -22,7 +22,12 @@ public class DatasEmJava {
 			System.out.println("Boleto Vencido - Urgente");
 			
 			}
+		if(dataVencimentoBoleto.before(dataAtualHoje)) {
+			System.out.println("Boleto Vencido - Urgente");
+		}else {
+			System.out.println("Boleto não Vencido");
 		
+		}
 		}
 	}
 	
