@@ -8,9 +8,9 @@ public class DatasEmJava8 {
 
 	public static void main(String[] args) throws ParseException {
 	
-		LocalDate dataAntiga = LocalDate.of(2020, 2, 7);
+		LocalDate dataAntiga = LocalDate.parse("2019-10-05");
 		
-		LocalDate dataNova = LocalDate.of(2021, 7, 4);
+		LocalDate dataNova = LocalDate.parse("2021-10-10");
 		
 		System.out.println("Data amtiga é maior que data nova: " 
 		+ dataAntiga.isAfter(dataNova));
