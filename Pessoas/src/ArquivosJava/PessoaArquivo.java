@@ -31,8 +31,15 @@ public class PessoaArquivo {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
+
+	@Override
+	public String toString() {
+		return "PessoaArquivo [nome=" + nome + ", email=" + email + ", idade=" + idade + "]";
+	}
+
+	
+	}
 	
 	
 	
-	
-}
+

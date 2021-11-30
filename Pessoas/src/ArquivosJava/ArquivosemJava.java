@@ -42,13 +42,9 @@ public class ArquivosemJava {
 		}
 		
 		FileWriter escrever_no_arquivo = new FileWriter(arquivo);
-		escrever_no_arquivo.write("Meu Texto No Arquivo.");
-		escrever_no_arquivo.write("\n");
-		escrever_no_arquivo.write("Minha Segunda Linha.");
-		escrever_no_arquivo.write("\n");
-		
+				
 		for (PessoaArquivo p : pessoas) {
-			escrever_no_arquivo.write(p.getNome() + " ; " + p.getIdade() + " ; " + p.getEmail());
+			escrever_no_arquivo.write(p.getNome() + ";" + p.getIdade() + ";" + p.getEmail());
 			escrever_no_arquivo.write("\n");
 		}
 				
