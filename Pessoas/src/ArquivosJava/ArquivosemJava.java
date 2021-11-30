@@ -32,9 +32,8 @@ public class ArquivosemJava {
 		pessoas.add(pessoa1);
 		pessoas.add(pessoa2);
 		pessoas.add(pessoa3);
-		
-		
-		File arquivo = new File("C:\\Users\\dougl\\git\\Pessoas\\Pessoas\\src\\ArquivosJava\\arquivo.txt");	
+				
+		File arquivo = new File("C:\\Users\\dougl\\git\\Pessoas\\Pessoas\\src\\ArquivosJava\\arquivo.csv");	
 			
 		if (!arquivo.exists()) {
 			arquivo.createNewFile();
