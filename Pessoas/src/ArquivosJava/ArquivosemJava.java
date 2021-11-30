@@ -21,9 +21,9 @@ public class ArquivosemJava {
 		pessoa2.setNome("Marcos Tadeu");
 		
 		PessoaArquivo pessoa3 = new PessoaArquivo();
-		pessoa2.setEmail("pessoa3@gmail.com");
-		pessoa2.setIdade(21);
-		pessoa2.setNome("Gustavo Lima");
+		pessoa3.setEmail("pessoa3@gmail.com");
+		pessoa3.setIdade(21);
+		pessoa3.setNome("Gustavo Lima");
 		
 		/*A Lista Pode Vir do banco de dados 
 		 * ou qual quer tipo de fonte*/
@@ -49,6 +49,7 @@ public class ArquivosemJava {
 		
 		for (PessoaArquivo p : pessoas) {
 			escrever_no_arquivo.write(p.getNome() + " ; " + p.getIdade() + " ; " + p.getEmail());
+			escrever_no_arquivo.write("\n");
 		}
 				
 		escrever_no_arquivo.flush();
