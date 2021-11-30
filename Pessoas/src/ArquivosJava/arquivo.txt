@@ -1,0 +1,3 @@
+Meu Texto No Arquivo.
+Minha Segunda Linha.
+Alex egidio ; 50 ; pessoa1@gmail.comGustavo Lima ; 21 ; pessoa3@gmail.comnull ; 0 ; null
